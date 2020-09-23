@@ -38,3 +38,5 @@ Route::get('/logout', function () {
     \Illuminate\Support\Facades\Auth::logout();
 });
 //laravel ui
+
+//make change in routes
