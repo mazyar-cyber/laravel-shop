@@ -6,6 +6,10 @@
     <title>داشبرد | کنترل پنل مدیریت</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
     <!-- Bootstrap 3.3.7 -->
     <link rel="stylesheet" href="/dist/css/bootstrap-theme.css">
 
@@ -39,7 +43,8 @@
     <![endif]-->
 
     <!-- Google Font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -61,9 +66,10 @@
 
 
             <!-- Delete This after download -->
-            <a href="https://github.com/hosseinizadeh/AdminLTE_Persian" class="btn hidden-xs" style="margin:6px 100px;padding:9px 50px;background-color:#d61577;border-color:#ad0b5d;font-weight:bold;color:#FFF">دانلود رایگان قالب</a>
+            <a href="https://github.com/hosseinizadeh/AdminLTE_Persian" class="btn hidden-xs"
+               style="margin:6px 100px;padding:9px 50px;background-color:#d61577;border-color:#ad0b5d;font-weight:bold;color:#FFF">دانلود
+                رایگان قالب</a>
             <!-- End Delete-->
-
 
 
             <div class="navbar-custom-menu">
@@ -82,7 +88,8 @@
                                     <li><!-- start message -->
                                         <a href="#">
                                             <div class="pull-right">
-                                                <img src="/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                                <img src="/dist/img/user2-160x160.jpg" class="img-circle"
+                                                     alt="User Image">
                                             </div>
                                             <h4>
                                                 علیرضا
@@ -95,7 +102,8 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-right">
-                                                <img src="/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                                                <img src="/dist/img/user3-128x128.jpg" class="img-circle"
+                                                     alt="User Image">
                                             </div>
                                             <h4>
                                                 نگین
@@ -107,7 +115,8 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-right">
-                                                <img src="/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                                <img src="/dist/img/user4-128x128.jpg" class="img-circle"
+                                                     alt="User Image">
                                             </div>
                                             <h4>
                                                 نسترن
@@ -119,7 +128,8 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-right">
-                                                <img src="/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                                                <img src="/dist/img/user3-128x128.jpg" class="img-circle"
+                                                     alt="User Image">
                                             </div>
                                             <h4>
                                                 نگین
@@ -131,7 +141,8 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-right">
-                                                <img src="/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                                <img src="/dist/img/user4-128x128.jpg" class="img-circle"
+                                                     alt="User Image">
                                             </div>
                                             <h4>
                                                 نسترن
@@ -204,7 +215,8 @@
                                                 <small class="pull-left">20%</small>
                                             </h3>
                                             <div class="progress xs">
-                                                <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar"
+                                                <div class="progress-bar progress-bar-aqua" style="width: 20%"
+                                                     role="progressbar"
                                                      aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                                                     <span class="sr-only">20% تکمیل شده</span>
                                                 </div>
@@ -219,7 +231,8 @@
                                                 <small class="pull-left">40%</small>
                                             </h3>
                                             <div class="progress xs">
-                                                <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar"
+                                                <div class="progress-bar progress-bar-green" style="width: 40%"
+                                                     role="progressbar"
                                                      aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                                                     <span class="sr-only">40% تکمیل شده</span>
                                                 </div>
@@ -234,7 +247,8 @@
                                                 <small class="pull-left">60%</small>
                                             </h3>
                                             <div class="progress xs">
-                                                <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar"
+                                                <div class="progress-bar progress-bar-red" style="width: 60%"
+                                                     role="progressbar"
                                                      aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                                                     <span class="sr-only">60% تکمیل شده</span>
                                                 </div>
@@ -249,7 +263,8 @@
                                                 <small class="pull-left">80%</small>
                                             </h3>
                                             <div class="progress xs">
-                                                <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar"
+                                                <div class="progress-bar progress-bar-yellow" style="width: 80%"
+                                                     role="progressbar"
                                                      aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                                                     <span class="sr-only">80% تکمیل شده</span>
                                                 </div>
@@ -362,8 +377,10 @@
             </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="{{route('procat.index')}}"><i class="fa fa-list-ol"></i> لیست دسته بندی محصولات</a></li>
-                        <li><a href="{{route('procat.create')}}"><i class="fa fa-circle-o"></i> اضافه نمودن دسته بندی محصولات</a></li>
+                        <li><a href="{{route('procat.index')}}"><i class="fa fa-list-ol"></i> لیست دسته بندی محصولات</a>
+                        </li>
+                        <li><a href="{{route('procat.create')}}"><i class="fa fa-circle-o"></i> اضافه نمودن دسته بندی
+                                محصولات</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
@@ -581,7 +598,8 @@
     </div>
     <!-- /.content-wrapper -->
     <footer class="main-footer text-left">
-        <strong>Copyleft &copy; 2014-2017 <a href="https://adminlte.io">Almsaeed Studio</a> & <a href="http://hosseinizadeh.ir/adminlte">Alireza Hosseinizadeh</a></strong>
+        <strong>Copyleft &copy; 2014-2017 <a href="https://adminlte.io">Almsaeed Studio</a> & <a
+                href="http://hosseinizadeh.ir/adminlte">Alireza Hosseinizadeh</a></strong>
     </footer>
 
     <!-- Control Sidebar -->
@@ -817,5 +835,6 @@
 <script src="/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="/dist/js/demo.js"></script>
+@yield('script')
 </body>
 </html>

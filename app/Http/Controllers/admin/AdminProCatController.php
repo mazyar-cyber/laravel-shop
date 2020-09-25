@@ -104,4 +104,25 @@ class AdminProCatController extends Controller
         $procat = ProCat::find($id)->delete();
         return redirect()->back();
     }
+
+    public function deleteAll()
+    {
+        $procat = ProCat::all();
+        foreach ($procat as $cat) {
+            $cat->delete();
+        }
+        return redirect()->back();
+    }
+
+    public function selectedDelete(Request $request)
+    {
+        if ($request->checkBoxArray=='اعمال'){
+            return redirect()->back();
+        }
+        foreach ($request->checkBoxArray as $catId) {
+            $cat=ProCat::find($catId);
+            $cat->delete();
+        }
+        return redirect()->back();
+    }
 }

@@ -18,10 +18,12 @@ Route::get('/', function () {
 });
 
 use App\Http\Controllers\admin\AdminUserController;
-Route::prefix('admin')->middleware('auth')->group(function (){
+
+Route::prefix('admin')->middleware('auth')->group(function () {
     Route::resource('users', AdminUserController::class);
     Route::resource('procat', \App\Http\Controllers\admin\AdminProCatController::class);
-
+    Route::delete('procatdeleteAll',"\App\Http\Controllers\admin\AdminProCatController@deleteAll")->name('proCat.deleteAll');
+    Route::delete('proCatSelectedDelete',"\App\Http\Controllers\admin\AdminProCatController@selectedDelete")->name('proCat.deleteSelected');
 });
 
 

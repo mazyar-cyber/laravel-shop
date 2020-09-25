@@ -3,6 +3,7 @@
     <div class="box box-info">
         <div class="box-header with-border">
             <h3 class="box-title">اضافه نمودن دسته بندی</h3>
+            @include('admin.partial.error')
             <br><br>
             <a class="btn  pull-right" href="{{route('procat.index')}}">
                 <i class="fa fa-list"></i> لیست دسته بندی
@@ -18,7 +19,8 @@
                     <label for="inputEmail3" class="col-sm-2 control-label"> نام دسته بندی</label>
 
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputEmail3" placeholder=" نام دسته بندی" name="name">
+                        <input type="text" class="form-control" id="inputEmail3" placeholder=" نام دسته بندی"
+                               name="name" required>
                     </div>
                 </div>
 
@@ -34,11 +36,12 @@
                     </div>
                 </div>
 
-            <!-- /.box-body -->
-            <div class="box-footer">
-                <button type="submit" class="btn btn-app pull-left" name="btn"><i class="fa fa-save"></i>ذخیره </button>
-            </div>
-            <!-- /.box-footer -->
+                <!-- /.box-body -->
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-app pull-left" name="btn"><i class="fa fa-save"></i>ذخیره
+                    </button>
+                </div>
+                <!-- /.box-footer -->
         </form>
     </div>
 @endsection

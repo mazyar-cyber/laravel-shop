@@ -24,13 +24,13 @@ class ProCatRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=>'required'
+            'name'=>['required']
         ];
     }
     public function messages()
     {
         return [
-          'name.required'=>'پر کردن فیلد نام الزامی است'
+          'name.required'=>'پر کردن فیلد نام الزامی است',
         ];
     }
 }
