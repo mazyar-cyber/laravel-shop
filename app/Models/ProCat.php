@@ -11,6 +11,22 @@ class ProCat extends Model
 
     public function category()
     {
-        return $this->belongsTo(ProCat::class,'parent_id');
+        return $this->belongsTo(ProCat::class, 'parent_id');
     }
+
+    public function categoryRecursive()
+    {
+        return $this->category()->with('categoryRecursive');
+    }
+
+    public function children()
+    {
+        return $this->hasMany(ProCat::class,'parent_id');
+    }
+
+    public function childrenRecursive()
+    {
+        return $this->children()->with('childrenRecursive');
+    }
+
 }

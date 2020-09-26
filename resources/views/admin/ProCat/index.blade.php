@@ -23,8 +23,8 @@
                 <div class="box-header">
                     <h2 class="box-title">لیست دسته بندی محصولات</h2>
                     <br><br>
-                    <a class="btn btn-app pull-right" href="{{route('procat.create')}}">
-                        <i class="fa fa-edit"></i> افزودن
+                    <a class="btn btn-app pull-left" href="{{route('procat.create')}}">
+                        <i class="fa fa-plus"></i> جدید
                     </a>
                     {{--                    {!! Form::open(['route' => 'proCat.deleteAll', 'method' => 'DELETE']) !!}--}}
                     {{--                    <button class="btn btn-app pull-left" name="btn">--}}
@@ -51,7 +51,7 @@
                         <tr>
                             <th><input type="checkbox" name="checkBoxArray" id="option"></th>
                             <th>عنوان</th>
-                            <th>زیرگروه</th>
+                            <th>دسته والد</th>
                             <th>تاریخ</th>
                             <th>حذف همه</th>
                             <th></th>
@@ -68,7 +68,7 @@
                                         <td>سرگروه آن از بین رفته</td>
                                     @endif
                                 @else
-                                    <td>سرگروه است</td>
+                                    <td>دسته اصلی</td>
                                 @endif
                                 <td>
                                     {{\Morilog\Jalali\Jalalian::forge($cat->created_at)->format('%B %d، %Y') }}

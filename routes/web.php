@@ -33,6 +33,12 @@ Route::prefix('admin')->middleware('auth')->group(function () {
 //});
 
 
+Route::get('/procatt/{id}', function ($id) {
+    $proCat=\App\Models\ProCat::find($id);
+    return $proCat->childrenRecursive;
+});
+
+
 //laravel ui
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

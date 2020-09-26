@@ -27,7 +27,7 @@ class AdminProCatController extends Controller
      */
     public function create()
     {
-        $mainCats = ProCat::all()->where('parent_id', null);
+        $mainCats = ProCat::with('categoryRecursive')->where('parent_id',null)->get();
         return view('admin.ProCat.create', compact('mainCats'));
     }
 
