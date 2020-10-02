@@ -12,11 +12,11 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        {!! Form::model($cat, ['route' => ['procat.update', $cat->id], 'method' => 'PUT']) !!}
+        {!! Form::model($cat, ['route' => ['procat.update', $cat->id], 'method' => 'PATCH']) !!}
 
         <div class="box-body">
             <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label"> نام دسته بندی</label>
+                <label for="name" class="col-sm-2 control-label"> نام دسته بندی</label>
 
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="inputEmail3" placeholder=" نام دسته بندی"
@@ -24,6 +24,7 @@
                 </div>
             </div>
             <br><br>
+
             <div class="form-group">
                 <label for="parent" class="col-sm-2 control-label">سرگروه را انتخاب کنید</label>
                 <div class="col-sm-10">
@@ -31,7 +32,10 @@
                         <option value="0">سرگروه</option>
                         @foreach($mainCats as $c)
                             <option value="{{$c->id}}">{{$c->name}}</option>
-                        @endforeach
+                    @if ($c->childrenRecursive!=null)
+                        @include('admin.partial.childrenRecursive',['c'=>$c->childrenRecursive,'level'=>2])
+                    @endif
+                    @endforeach
                     </select>
                 </div>
             </div>

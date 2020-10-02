@@ -22,6 +22,9 @@
             <div class="box">
                 <div class="box-header">
                     <h2 class="box-title">لیست دسته بندی محصولات</h2>
+                    @if (\Illuminate\Support\Facades\Session::has('subcat'))
+                        <div class="alert alert-error">{{Session('subcat')}}</div>
+                    @endif
                     <br><br>
                     <a class="btn btn-app pull-left" href="{{route('procat.create')}}">
                         <i class="fa fa-plus"></i> جدید
@@ -43,9 +46,17 @@
                     </div>
                 </div>
                 <!-- /.box-header -->
-                {!! Form::open(['route' => 'proCat.deleteSelected', 'method' => 'DELETE']) !!}
-                <input type="submit" name="checkBoxArray" class="btn btn-danger" value="حذف همه">
+                {{--                {!! Form::open(['route' => 'proCat.deleteSelected', 'method' => 'DELETE']) !!}--}}
+
                 <div class="box-body table-responsive no-padding">
+                    {{--                    <form action="/admin/proCatSelectedDelete" method="post">--}}
+                    {!! Form::open(['url' => '/admin/proCatSelectedDelete', 'method' => 'POST']) !!}
+
+                    <select name="checkBoxArray" class="select2-dropdown">
+                        <option value="delete">حذف</option>
+                    </select>
+                    <input type="submit" value="اعمال" name="submit" class="btn btn-danger">
+                    <br>
                     <table class="table table-hover">
                         <tbody>
                         <tr>
@@ -53,14 +64,16 @@
                             <th>عنوان</th>
                             <th>دسته والد</th>
                             <th>تاریخ</th>
-                            <th>حذف همه</th>
-                            <th></th>
+                            <th> ویرایش</th>
                         </tr>
+
                         @foreach($procats as $cat)
                             <tr>
                                 <td><input class="checkBox" type="checkbox" name="checkBoxArray[]"
                                            value="{{$cat->id}}"></td>
-                                <td>{{$cat->name}}</td>
+
+                                <td><a href="procat/{{$cat->id}}/edit">{{$cat->name}}</a></td>
+
                                 @if ($cat->parent_id)
                                     @if ($cat->category)
                                         <td>{{$cat->category->name}}</td>
@@ -68,30 +81,26 @@
                                         <td>سرگروه آن از بین رفته</td>
                                     @endif
                                 @else
-                                    <td>دسته اصلی</td>
+                                    <td><span style="background-color:yellow;">دسته اصلی</span></td>
                                 @endif
+
+
                                 <td>
                                     {{\Morilog\Jalali\Jalalian::forge($cat->created_at)->format('%B %d، %Y') }}
                                 </td>
 
-                                {!! Form::model($cat, ['route' => ['procat.destroy', $cat->id], 'method' => 'DELETE']) !!}
                                 <td>
-                                    <button class="btn btn-danger"> حذف</button>
+                                    <a href="procat/{{$cat->id}}/edit" class="btn btn-instagram">ویرایش</a>
                                 </td>
-                                {!! Form::close() !!}
 
-                                {!! Form::model($cat, ['route' => ['procat.edit', $cat->id], 'method' => 'GET']) !!}
-                                <td>
-                                    <button class="btn btn-warning  ">ویرایش</button>
-                                </td>
-                                {!! Form::close() !!}
                             </tr>
                         @endforeach
                         </tbody>
                     </table>
+                    {!! Form::close() !!}
                 </div>
-                {!! Form::close() !!}
-            <!-- /.box-body -->
+
+                <!-- /.box-body -->
 
             </div>
             <!-- /.box -->

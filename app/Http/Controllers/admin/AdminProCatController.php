@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ProCatRequest;
 use App\Models\ProCat;
 use Illuminate\Http\Request;
+use MongoDB\Driver\Session;
 
 class AdminProCatController extends Controller
 {
@@ -27,7 +28,7 @@ class AdminProCatController extends Controller
      */
     public function create()
     {
-        $mainCats = ProCat::with('categoryRecursive')->where('parent_id',null)->get();
+        $mainCats = ProCat::with('categoryRecursive')->where('parent_id', null)->get();
         return view('admin.ProCat.create', compact('mainCats'));
     }
 
@@ -68,13 +69,13 @@ class AdminProCatController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param int $id
-     * @return \Illuminate\Http\Response
+     * @return int
      */
     public function edit($id)
     {
-        $mainCats = ProCat::all()->where('parent_id', null);
-        $cat = ProCat::findOrfail($id);
-        return view('admin.ProCat.edit', compact(['mainCats', 'cat']));
+        $cat=ProCat::findOrfail($id);
+        $mainCats = ProCat::with('categoryRecursive')->where('parent_id', null)->get();
+        return view('admin.ProCat.edit',compact(['cat','mainCats']));
     }
 
     /**
@@ -88,7 +89,11 @@ class AdminProCatController extends Controller
     {
         $procat = ProCat::find($id);
         $procat->name = $request->name;
-        $procat->parent_id = $request->parent_id;
+        if ($request->parent_id == 0) {
+            $procat->parent_id = null;
+        } else {
+            $procat->parent_id = $request->parent_id;
+        }
         $procat->save();
         return redirect()->back();
     }
@@ -116,11 +121,15 @@ class AdminProCatController extends Controller
 
     public function selectedDelete(Request $request)
     {
-        if ($request->checkBoxArray=='اعمال'){
+        if ($request->checkBoxArray == 'اعمال') {
             return redirect()->back();
         }
         foreach ($request->checkBoxArray as $catId) {
-            $cat=ProCat::find($catId);
+            $cat = ProCat::findOrfail($catId);
+            if ($cat->childrenRecursive!=null){
+                \Illuminate\Support\Facades\Session::flash('subcat','دسته بندی حذف نمیشود، چون دارای زیر دسته است');
+                return redirect()->back();
+            }
             $cat->delete();
         }
         return redirect()->back();
