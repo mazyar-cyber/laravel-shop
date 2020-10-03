@@ -383,6 +383,28 @@
                                 محصولات</a></li>
                     </ul>
                 </li>
+
+
+
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-database"></i>
+                        <span>مشخصات محصولات</span>
+                        <span class="pull-left-container">
+              <i class="fa fa-angle-right pull-left"></i>
+            </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{route('productProperty.index')}}"><i class="fa fa-list-ol"></i> لیست مشخصات محصولات</a>
+                        </li>
+                        <li><a href="{{route('productProperty.create')}}"><i class="fa fa-plus"></i> اضافه نمودن مشخصه ی جدید
+                                </a></li>
+                    </ul>
+                </li>
+
+
+
+
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-laptop"></i>

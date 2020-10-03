@@ -22,6 +22,8 @@ use App\Http\Controllers\admin\AdminUserController;
 Route::prefix('admin')->middleware('auth')->group(function () {
     Route::resource('users', AdminUserController::class);
     Route::resource('procat', \App\Http\Controllers\admin\AdminProCatController::class);
+    Route::resource('productProperty', \App\Http\Controllers\admin\AdminProductPropertyController::class);
+    Route::post('productPropertySelectedDelete', "\App\Http\Controllers\admin\AdminProductPropertyController@deleteAll")->name('property.deleteAll');
     Route::delete('procatdeleteAll', "\App\Http\Controllers\admin\AdminProCatController@deleteAll")->name('proCat.deleteAll');
     Route::post('proCatSelectedDelete', "\App\Http\Controllers\admin\AdminProCatController@selectedDelete")->name('proCat.deleteSelected');
 });
