@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ProductProperty extends Model
+class PropertyValue extends Model
 {
     use HasFactory;
 
-    public function value()
+    public function property()
     {
-        return $this->hasMany(PropertyValue::class,'property_id');
+        return $this->belongsTo(ProductProperty::class,'property_id');
     }
 }

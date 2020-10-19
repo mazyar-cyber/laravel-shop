@@ -34,12 +34,14 @@
     <link rel="stylesheet" href="/bower_components/bootstrap-daterangepicker/daterangepicker.css">
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-
+    <link rel="stylesheet" href="/css/dropzone.min.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/dropzone.js"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/min/dropzone.min.js"></script>-->
     <![endif]-->
 
     <!-- Google Font -->
@@ -283,7 +285,7 @@
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <img src="/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                            <span class="hidden-xs">علیرضا حسینی زاده</span>
+                            <span class="hidden-xs">Mr.fukashi</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
@@ -385,7 +387,6 @@
                 </li>
 
 
-
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-database"></i>
@@ -395,14 +396,51 @@
             </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="{{route('productProperty.index')}}"><i class="fa fa-list-ol"></i> لیست مشخصات محصولات</a>
+                        <li><a href="{{route('productProperty.index')}}"><i class="fa fa-list-ol"></i> لیست مشخصات
+                                محصولات</a>
                         </li>
-                        <li><a href="{{route('productProperty.create')}}"><i class="fa fa-plus"></i> اضافه نمودن مشخصه ی جدید
-                                </a></li>
+                        <li><a href="{{route('productProperty.create')}}"><i class="fa fa-plus"></i> اضافه نمودن مشخصه ی
+                                جدید
+                            </a></li>
                     </ul>
                 </li>
 
 
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-database"></i>
+                        <span>مقادیر مشخصات</span>
+                        <span class="pull-left-container">
+              <i class="fa fa-angle-right pull-left"></i>
+            </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{route('ProductPropertyValue.index')}}"><i class="fa fa-list-ol"></i> لیست مقادیر
+                                مشخصات محصولات</a>
+                        </li>
+                        <li><a href="{{route('ProductPropertyValue.create')}}"><i class="fa fa-plus"></i> اضافه نمودن
+                                مقدار جدید
+                            </a></li>
+                    </ul>
+                </li>
+
+
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-database"></i>
+                        <span>برندها</span>
+                        <span class="pull-left-container">
+              <i class="fa fa-angle-right pull-left"></i>
+            </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{route('brand.index')}}"><i class="fa fa-list-ol"></i>
+                                 لیست برندها</a>
+                        </li>
+                        <li><a href="{{route('brand.create')}}"><i class="fa fa-plus"></i> اضافه نمودن
+                            </a></li>
+                    </ul>
+                </li>
 
 
                 <li class="treeview">

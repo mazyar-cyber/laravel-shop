@@ -23,15 +23,21 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::resource('users', AdminUserController::class);
     Route::resource('procat', \App\Http\Controllers\admin\AdminProCatController::class);
     Route::resource('productProperty', \App\Http\Controllers\admin\AdminProductPropertyController::class);
+    Route::resource('ProductPropertyValue', \App\Http\Controllers\admin\AdminProductPropertyValue::class);
+    Route::resource('brand', \App\Http\Controllers\admin\AdminBrandController::class);
+    Route::post('brandSelectedDelete', '\App\Http\Controllers\admin\AdminBrandController@selectedDestroy')->name('brand.selectedDel');
+    Route::post('branduploader', "\App\Http\Controllers\admin\AdminBrandController@Uploader")->name('brand.upload');
     Route::post('productPropertySelectedDelete', "\App\Http\Controllers\admin\AdminProductPropertyController@deleteAll")->name('property.deleteAll');
     Route::delete('procatdeleteAll', "\App\Http\Controllers\admin\AdminProCatController@deleteAll")->name('proCat.deleteAll');
     Route::post('proCatSelectedDelete', "\App\Http\Controllers\admin\AdminProCatController@selectedDelete")->name('proCat.deleteSelected');
 });
 
-
-//Route::get('/procat/{id}', function ($id) {
-//    $proCat=\App\Models\ProCat::find($id);
-//    return $proCat->category;
+//trying relation between models
+//Route::get('/prop/{id}', function ($id) {
+////    $property=\App\Models\ProductProperty::find($id);
+//    $propValue = \App\Models\PropertyValue::find($id);
+//    return $propValue->property;
+////    return $property->value;
 //});
 
 

@@ -2,7 +2,7 @@
 @section('script')
     <script type="text/javascript">
         $(document).ready(function () {
-            $("#option1").click(function () {
+            $("#option3").click(function () {
                 if (this.checked) {
                     $(".checkBox").each(function () {
                         this.checked = true
@@ -21,16 +21,13 @@
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-header">
-                    <h2 class="box-title">لیست مشخصات محصولات</h2>
-                    @if (\Illuminate\Support\Facades\Session::has('subcat'))
-                        <div class="alert alert-error">{{Session('subcat')}}</div>
-                    @endif
+                    <h2 class="box-title">لیست برندهای محصولات</h2>
+                    {{--                    @if (\Illuminate\Support\Facades\Session::has('subcat'))--}}
+                    {{--                        <div class="alert alert-error">{{Session('subcat')}}</div>--}}
+                    {{--                    @endif--}}
                     <br><br>
-                    <a class="btn btn-app pull-left" href="{{route('productProperty.create')}}">
+                    <a class="btn btn-app pull-left" href="{{route('brand.create')}}">
                         <i class="fa fa-plus"></i> جدید
-                    </a>
-                    <a class="btn btn-app pull-left" href="{{route('ProductPropertyValue.create')}}">
-                        <i class="fa fa-plus"></i> مقدار جدید
                     </a>
                     <div class="box-tools">
                         <div class="input-group input-group-sm" style="width: 150px;">
@@ -47,7 +44,7 @@
 
                 <div class="box-body table-responsive no-padding">
                     {{--                    <form action="/admin/propertieselectedDelete" method="post">--}}
-                    {!! Form::open(['route' => 'property.deleteAll', 'method' => 'POST']) !!}
+                    {!! Form::open(['route' => 'brand.selectedDel', 'method' => 'POST']) !!}
 
                     <select name="checkBoxArray" class="select2-dropdown">
                         <option value="delete">حذف</option>
@@ -57,29 +54,28 @@
                     <table class="table table-hover">
                         <tbody>
                         <tr>
-                            <th><input type="checkbox" name="checkBoxArray" id="option1"></th>
+                            <th><input type="checkbox" name="checkBoxArray" id="option3"></th>
                             <th>عنوان</th>
-                            <th>نوع</th>
+                            <th>توضیحات</th>
                             <th>تاریخ</th>
                             <th> ویرایش</th>
                         </tr>
 
-                        @foreach($properties as $property)
+                        @foreach($brands as $brand)
                             <tr>
                                 <td><input class="checkBox" type="checkbox" name="checkBoxArray[]"
-                                           value="{{$property->id}}"></td>
+                                           value="{{$brand->id}}"></td>
 
-                                <td>{{$property->title}}</td>
+                                <td>{{$brand->name}}</td>
 
-                                <td>{{$property->type}}</td>
+                                <td>{{\Illuminate\Support\Str::limit($brand->description, 121, '...')}}</td>
 
                                 <td>
-                                    {{\Morilog\Jalali\Jalalian::forge($property->created_at)->format('%B %d، %Y') }}
+                                    {{\Morilog\Jalali\Jalalian::forge($brand->created_at)->format('%B %d، %Y') }}
                                 </td>
 
                                 <td>
-
-                                    <a href="productProperty/{{$property->id}}/edit"
+                                    <a href="brand/{{$brand->id}}/edit"
                                        class="btn btn-instagram">ویرایش</a>
                                 </td>
 
