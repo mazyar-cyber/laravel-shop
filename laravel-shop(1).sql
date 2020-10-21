@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 19, 2020 at 10:21 PM
+-- Generation Time: Oct 21, 2020 at 03:45 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.7
 
@@ -41,8 +41,30 @@ CREATE TABLE `brands` (
 --
 
 INSERT INTO `brands` (`id`, `name`, `description`, `photo_path`, `created_at`, `updated_at`) VALUES
-(2, 'asuz', 'سوس نام خود را از پگاسوس گرفته است, اسب بالداری در اساطیر یونان که نماد اندیشه و خرد است. ایسوس تجسم قدرت, پاکی و روح ماجراجوی این موجود فوق العاده است و پرواز در اوج را با هر محصول خود ایجاد می کند.\r\n\r\nصنعت فناوری اطلاعات تایوان طی چند دهه اخیر رشد خارق العاده ای داشته و اکنون این کشور نیروی محرک بازارهای جهانی است. ایسوس مدت ها است که در خط مقدم این شکوفایی قرار دارد و حیات خود را در یک شرکت کوچک با تعداد اندکی کارمند برای تولید مادربورد آغاز کرد اما اکنون یک کمپانی پیشرو در تایوان با 12.500 کارمند در سراسر جهان است. ایسوس در اغلب حوزه های فناوری مانند اجزای رایانه, لوازم جانبی, نوت بوک, تبلت, سرور و گوشی های هوشمند کالا تولید می کند.\r\n\r\nخلاقیت کلید موفقیت ایسوس است. در سال 2011 برای مخاطبان پرشور خود در نمایشگاه کامپیوتکس از PadFone رونمایی کرد و امسال مدیر ایسوس, Jonney Shih, یکبار دیگر این پرچم را با معرفی اولترابوک های با کاربرد دوگانه TAICHI و Transformer Book به احتزاز درآورد.\r\n\r\nASUS TAICHI یک اولترابوک با نمایشگر منحصر به فرد لمسی در دو طرف است که به کاربران امکان می دهد تنها با بازکردن آن به سرعت بین نوت بوک و تبلت جابجا شوند. Transformer Book یک اولترابوک قابل تبدیل است که غیر از پایه کیبورد با نور زمینه کلیدها, یک نوت بوک با هارد دیسک و فضای ذخیره سازی و همچنین یک تبلت با تشخیص چندین لمس همزمان و درایو SSD است.\r\n\r\nهمراه با سری جدید تبلت های هیجان انگیز ویندوز RT و ویندوز 8, ایسوس دارای رده وسیعی از محصولات خلاقانه است که تصور کاربران برای ورود به عصر جدید رایانش ابری را آماده خواهد کرد.\r\n\r\nاین نگاه راهبردی دلیلی است که ایسوس می تواند طراحی و نوآوری با کیفیت بالا را برای همگان فراهم کند و مورد تحسین گسترده قرار گیرد. محصولات ایسوس در سال 2013 موفق بع دریافت 4256 جایزه و تقدیر بین المللی شده اند یعنی 11 جایزه در هر روز و برای تمام روزهای سال. حجم سالانه تولیدات ایسوس در بخش نوت بوک بطور پیوسته با رشد همراه بوده و درآمد در سال 2011 درآمد آن به 11.9 میلیارد دلار رسید.', '1602924465463.jpg', '2020-10-17 05:17:45', '2020-10-17 05:17:45'),
-(11, 'lenevo', 'لنوو بزرگترین تولید کننده لپ تاپ است', '1603012799lenevo.png', '2020-10-18 05:49:59', '2020-10-18 05:49:59');
+(2, 'asuz', 'ایسوس نام خود را از پگاسوس گرفته است, اسب بالداری در اساطیر یونان که نماد اندیشه و خرد است. ایسوس تجسم قدرت, پاکی و روح ماجراجوی این موجود فوق العاده است و پرواز در اوج را با هر محصول خود ایجاد می کند.\r\n\r\nصنعت فناوری اطلاعات تایوان طی چند دهه اخیر رشد خارق العاده ای داشته و اکنون این کشور نیروی محرک بازارهای جهانی است. ایسوس مدت ها است که در خط مقدم این شکوفایی قرار دارد و حیات خود را در یک شرکت کوچک با تعداد اندکی کارمند برای تولید مادربورد آغاز کرد اما اکنون یک کمپانی پیشرو در تایوان با 12.500 کارمند در سراسر جهان است. ایسوس در اغلب حوزه های فناوری مانند اجزای رایانه, لوازم جانبی, نوت بوک, تبلت, سرور و گوشی های هوشمند کالا تولید می کند.\r\n\r\nخلاقیت کلید موفقیت ایسوس است. در سال 2011 برای مخاطبان پرشور خود در نمایشگاه کامپیوتکس از PadFone رونمایی کرد و امسال مدیر ایسوس, Jonney Shih, یکبار دیگر این پرچم را با معرفی اولترابوک های با کاربرد دوگانه TAICHI و Transformer Book به احتزاز درآورد.\r\n\r\nASUS TAICHI یک اولترابوک با نمایشگر منحصر به فرد لمسی در دو طرف است که به کاربران امکان می دهد تنها با بازکردن آن به سرعت بین نوت بوک و تبلت جابجا شوند. Transformer Book یک اولترابوک قابل تبدیل است که غیر از پایه کیبورد با نور زمینه کلیدها, یک نوت بوک با هارد دیسک و فضای ذخیره سازی و همچنین یک تبلت با تشخیص چندین لمس همزمان و درایو SSD است.\r\n\r\nهمراه با سری جدید تبلت های هیجان انگیز ویندوز RT و ویندوز 8, ایسوس دارای رده وسیعی از محصولات خلاقانه است که تصور کاربران برای ورود به عصر جدید رایانش ابری را آماده خواهد کرد.\r\n\r\nاین نگاه راهبردی دلیلی است که ایسوس می تواند طراحی و نوآوری با کیفیت بالا را برای همگان فراهم کند و مورد تحسین گسترده قرار گیرد. محصولات ایسوس در سال 2013 موفق بع دریافت 4256 جایزه و تقدیر بین المللی شده اند یعنی 11 جایزه در هر روز و برای تمام روزهای سال. حجم سالانه تولیدات ایسوس در بخش نوت بوک بطور پیوسته با رشد همراه بوده و درآمد در سال 2011 درآمد آن به 11.9 میلیارد دلار رسید.', '1603227809Captur2e.PNG', '2020-10-17 05:17:45', '2020-10-20 17:34:41'),
+(11, 'lenevo', 'لنوو بزرگترین تولید کننده لپ تاپ در سطح جهان است', '1603012799lenevo.png', '2020-10-18 05:49:59', '2020-10-20 17:35:05');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cat_property`
+--
+
+CREATE TABLE `cat_property` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `category_id` bigint(20) UNSIGNED NOT NULL,
+  `property_id` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `cat_property`
+--
+
+INSERT INTO `cat_property` (`id`, `category_id`, `property_id`, `created_at`, `updated_at`) VALUES
+(1, 1, 17, '2020-10-14 08:50:55', '2020-10-22 08:50:55'),
+(2, 4, 15, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -84,7 +106,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (20, '2020_10_02_194235_create_product_properties_table', 2),
 (21, '2020_09_20_161408_create_pro_cats_table', 3),
 (22, '2020_10_04_140509_create_property_values_table', 3),
-(24, '2020_10_05_173419_create_brands_table', 4);
+(24, '2020_10_05_173419_create_brands_table', 4),
+(25, '2020_10_20_210838_create_products_table', 5),
+(26, '2020_10_21_084729_inductor_table_between_procat_tbl_and_prop_tbl', 6);
 
 -- --------------------------------------------------------
 
@@ -97,6 +121,36 @@ CREATE TABLE `password_resets` (
   `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `products`
+--
+
+CREATE TABLE `products` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sku` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` enum('1','0') COLLATE utf8mb4_unicode_ci NOT NULL,
+  `price` double(8,2) NOT NULL,
+  `discount_price` double(8,2) DEFAULT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `brand_id` bigint(20) UNSIGNED NOT NULL,
+  `cat_id` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `title`, `sku`, `slug`, `status`, `price`, `discount_price`, `description`, `brand_id`, `cat_id`, `created_at`, `updated_at`) VALUES
+(1, 'sdc', 'sdcsdc', 'sdcsdc', '0', 0.00, 0.00, 'sdcsdc', 11, 5, '2020-10-14 21:20:27', '2020-10-13 21:20:27'),
+(2, 'ال تاب فلان', '123143', 'ال تاب فلان', '0', 999999.99, 100.00, 'یزسیزسیزیسزیسزسیزسیزس', 11, 2, '2020-10-21 08:26:24', '2020-10-27 08:26:24'),
+(3, 'لب تاب لنوو', '123edas21', 'L-laptop', '0', 22000.00, 200.00, 'استوک دو سال کارکرده سالم', 11, 9, '2020-10-21 10:08:33', '2020-10-21 10:08:33');
 
 -- --------------------------------------------------------
 
@@ -178,7 +232,9 @@ INSERT INTO `pro_cats` (`id`, `name`, `meta_description`, `meta_title`, `meta_ke
 (4, 'لباس زمستانی', '$request->meta_description', '$request->meta_description', '$request->meta_description', 1, '2020-10-04 10:43:20', '2020-10-04 10:43:20'),
 (5, 'دستکش', '$request->meta_description', '$request->meta_description', '$request->meta_description', 4, '2020-10-04 10:43:36', '2020-10-04 10:43:36'),
 (6, 'دستکش نخی', '$request->meta_description', '$request->meta_description', '$request->meta_description', 5, '2020-10-04 10:43:52', '2020-10-04 10:43:52'),
-(7, 'کاپشن', '$request->meta_description', '$request->meta_description', '$request->meta_description', 4, '2020-10-04 10:44:10', '2020-10-04 10:44:10');
+(7, 'کاپشن', '$request->meta_description', '$request->meta_description', '$request->meta_description', 4, '2020-10-04 10:44:10', '2020-10-04 10:44:10'),
+(8, 'الکترونیکی', '$request->meta_description', '$request->meta_description', '$request->meta_description', NULL, '2020-10-21 09:20:18', '2020-10-21 09:20:18'),
+(9, 'لب تاپ', '$request->meta_description', '$request->meta_description', '$request->meta_description', 8, '2020-10-21 09:20:48', '2020-10-21 09:20:48');
 
 -- --------------------------------------------------------
 
@@ -228,6 +284,14 @@ ALTER TABLE `brands`
   ADD UNIQUE KEY `brands_name_unique` (`name`);
 
 --
+-- Indexes for table `cat_property`
+--
+ALTER TABLE `cat_property`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `cat_property_category_id_foreign` (`category_id`),
+  ADD KEY `cat_property_property_id_foreign` (`property_id`);
+
+--
 -- Indexes for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
@@ -245,6 +309,16 @@ ALTER TABLE `migrations`
 --
 ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
+
+--
+-- Indexes for table `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `products_sku_unique` (`sku`),
+  ADD UNIQUE KEY `products_slug_unique` (`slug`),
+  ADD KEY `products_brand_id_foreign` (`brand_id`),
+  ADD KEY `products_cat_id_foreign` (`cat_id`);
 
 --
 -- Indexes for table `product_properties`
@@ -283,6 +357,12 @@ ALTER TABLE `brands`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
+-- AUTO_INCREMENT for table `cat_property`
+--
+ALTER TABLE `cat_property`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
@@ -292,7 +372,13 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `product_properties`
@@ -310,7 +396,7 @@ ALTER TABLE `property_values`
 -- AUTO_INCREMENT for table `pro_cats`
 --
 ALTER TABLE `pro_cats`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -321,6 +407,20 @@ ALTER TABLE `users`
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `cat_property`
+--
+ALTER TABLE `cat_property`
+  ADD CONSTRAINT `cat_property_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `pro_cats` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `cat_property_property_id_foreign` FOREIGN KEY (`property_id`) REFERENCES `product_properties` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `products`
+--
+ALTER TABLE `products`
+  ADD CONSTRAINT `products_brand_id_foreign` FOREIGN KEY (`brand_id`) REFERENCES `brands` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `products_cat_id_foreign` FOREIGN KEY (`cat_id`) REFERENCES `pro_cats` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `property_values`
