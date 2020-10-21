@@ -41,7 +41,7 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/dropzone.js"></script>-->
-<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/min/dropzone.min.js"></script>-->
+    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/min/dropzone.min.js"></script>-->
     <![endif]-->
 
     <!-- Google Font -->
@@ -435,13 +435,29 @@
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="{{route('brand.index')}}"><i class="fa fa-list-ol"></i>
-                                 لیست برندها</a>
+                                لیست برندها</a>
                         </li>
                         <li><a href="{{route('brand.create')}}"><i class="fa fa-plus"></i> اضافه نمودن
                             </a></li>
                     </ul>
                 </li>
 
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-database"></i>
+                        <span>محصولات</span>
+                        <span class="pull-left-container">
+              <i class="fa fa-angle-right pull-left"></i>
+            </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{route('product.index')}}"><i class="fa fa-list-ol"></i>
+                                لیست محصولات</a>
+                        </li>
+                        <li><a href="{{route('product.create')}}"><i class="fa fa-plus"></i>اضافه نمودن محصولات
+                            </a></li>
+                    </ul>
+                </li>
 
                 <li class="treeview">
                     <a href="#">

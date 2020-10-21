@@ -30,14 +30,17 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::post('productPropertySelectedDelete', "\App\Http\Controllers\admin\AdminProductPropertyController@deleteAll")->name('property.deleteAll');
     Route::delete('procatdeleteAll', "\App\Http\Controllers\admin\AdminProCatController@deleteAll")->name('proCat.deleteAll');
     Route::post('proCatSelectedDelete', "\App\Http\Controllers\admin\AdminProCatController@selectedDelete")->name('proCat.deleteSelected');
+    Route::resource('product',\App\Http\Controllers\admin\AdminProductController::class);
+    Route::post('productSelectedDelete', "\App\Http\Controllers\admin\AdminProductController@selectedDelete")->name('product.deleteSelected');
+
 });
 
 //trying relation between models
-//Route::get('/prop/{id}', function ($id) {
-////    $property=\App\Models\ProductProperty::find($id);
-//    $propValue = \App\Models\PropertyValue::find($id);
-//    return $propValue->property;
-////    return $property->value;
+//Route::get('/cat/{id}', function ($id) {
+////    $brand=\App\Models\Brands::find($id);
+////    $product=\App\Models\Product::find($id);
+//    $cat=\App\Models\ProCat::find($id);
+//    return $cat->property;
 //});
 
 

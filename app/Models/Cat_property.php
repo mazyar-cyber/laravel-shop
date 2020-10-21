@@ -5,12 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Brands extends Model
+class Cat_property extends Model
 {
     use HasFactory;
 
-    public function product()
-    {
-        return $this->hasMany(Product::class, 'brand_id');
-    }
+    protected $table = 'cat_property';
 }

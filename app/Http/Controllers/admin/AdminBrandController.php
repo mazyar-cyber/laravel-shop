@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\BrandRequest;
+use App\Http\Requests\BrandUpdateRequest;
 use App\Models\Brands;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -89,7 +90,7 @@ class AdminBrandController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(BrandUpdateRequest $request, $id)
     {
         $brand = Brands::find($id);
         $brand->name = $request->name;
